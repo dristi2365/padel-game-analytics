@@ -118,6 +118,30 @@ Sample output from the test video (325 seconds, 8125 frames):
 
 ---
 
+## Challenges Faced
+
+- **Camera angle** — the overhead fixed camera made it difficult to detect players 
+on the far side of the court as they appear much smaller in the frame
+
+- **Fence obstruction** — near-side players are partially hidden behind the court 
+fence at the bottom of the frame, causing missed or incomplete detections
+
+- **Shot classification without pose data** — without being able to see arm and 
+body orientation clearly from above, classifying shots accurately was the biggest 
+challenge. My first approach used fixed court positions which produced unrealistic 
+results (players only getting one shot type). I switched to a motion-based approach 
+tracking player movement between frames which gave much more realistic results
+
+- **No prior knowledge of padel** — I had never analyzed padel footage before this 
+assignment. Understanding what constitutes each shot type required research and 
+experimentation
+
+- **Processing speed** — running YOLO on every frame of a 5 minute 1080p video 
+was too slow, so I optimized by processing every 5th frame which gave a good 
+balance between speed and accuracy
+
+---
+
 ## What I would improve with more time
 
 - **Pose estimation using MediaPipe** — detect actual arm and body orientation to classify shots more accurately instead of relying on movement direction
