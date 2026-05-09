@@ -161,7 +161,6 @@ balance between speed and accuracy
 - YOLOv8 (Ultralytics)
 - OpenCV
 - Pandas
-- NumPy
 
 ---
 
