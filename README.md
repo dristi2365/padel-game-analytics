@@ -44,22 +44,25 @@ This is more accurate than purely position-based rules because it uses actual pl
 ---
 
 ## Project Structure
+
+```
 padel_project/
-data/
-sample_video.mp4        # Input padel match video
-models/
-yolov8n.pt              # Pretrained YOLOv8 model
-output/
-annotated_video.mp4     # Output video with annotations
-shots.csv               # Detection results in CSV format
-shots.json              # Detection results in JSON format
-src/
-main.py                 # Main script - runs the full pipeline
-detection.py            # Player detection using YOLOv8
-shot_classification.py      # Motion based shot classification
-analytics.py            # Saves results and prints summary
-requirements.txt
-README.md
+    data/
+        sample_video.mp4        # Input padel match video
+    models/
+        yolov8n.pt              # Pretrained YOLOv8 model
+    output/
+        annotated_video.mp4     # Output video with annotations
+        shots.csv               # Detection results in CSV format
+        shots.json              # Detection results in JSON format
+    src/
+        main.py                 # Main script - runs the full pipeline
+        detection.py            # Player detection using YOLOv8
+        shot_classification.py  # Motion based shot classification
+        analytics.py            # Saves results and prints summary
+    requirements.txt
+    README.md
+```
 
 ---
 
